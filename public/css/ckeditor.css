@@ -1,0 +1,45 @@
+.ck-content .text-tiny {
+    font-size: 0.7em;
+}
+
+.ck-content .text-small {
+    font-size: 0.85em;
+}
+
+.ck-content .text-big {
+    font-size: 1.4em;
+}
+
+.ck-content .text-huge {
+    font-size: 1.8em;
+}
+
+.marker-green {
+    background-color: rgb(25, 156, 25);
+}
+
+.marker-yellow {
+    background-color: #cac407;
+}
+
+.pen-red {
+    color: hsl(343, 82%, 58%);
+}
+
+.ck-content .table {
+    float: left;
+    width: 550px;
+    height: 450px;
+}
+
+.ck-content .table table {
+    border-style: dashed;
+    border-color: 'hsl(90, 75%, 60%)';
+    border-width: 3px;
+}
+
+.ck-content .table table td {
+    text-align: center;
+    vertical-align: bottom;
+    padding: 10px
+}
