@@ -1,40 +1,25 @@
-<footer class="footer bg-dark">
-    <div class="container-footer">
-        <div class="row-footer">
-            <div class="footer-col">
-                <h4>Compañia</h4>
-                <ul>
-                    <li><a href="{{ route('view-servicios') }}">Servicios</a></li>
-                    <li><a href="{{ route('view-productos') }}">Productos</a></li>
-                    <li><a href="{{ route('view-nosotros') }}">Sobre nosotros</a></li>
-                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal_contactanos">Contactanos</a></li>
-                </ul>
+<footer style="background-color: #000428">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12 text-center fs-3 mb-3">Redes sociales</div>
+                    <div class="col-md-4 text-center"><i class="fa fa-facebook fs-4" aria-hidden="true"></i></div>
+                    <div class="col-md-4 text-center"><i class="fa fa-whatsapp fs-4" aria-hidden="true"></i></div>
+                    <div class="col-md-4 text-center"><i class="fa fa-twitter fs-4" aria-hidden="true"></i></div>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Sobre nosotros</h4>
-                <ul>
-                    <li><a href="{{ route('view-nosotros') }}">¿Quiénes Somos?</a></li>
-                    <li><a href="{{ route('view-nosotros') }}">Nuestros Clientes</a></li>
-                    <li><a href="{{ route('view-nosotros') }}">Nuestros logros</a></li>
-                    <li><a href="{{ route('view-nosotros') }}">Nuestro compromiso</a></li>
-                </ul>
+            <div class="col-md-4 text-center">
+                <div class="col-md-12 fs-1 mt-5">Nombre de la empresa</div>
+                <div class="col-md-12 mt-3 text-small text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, temporibus.</div>
             </div>
-            <div class="footer-col">
-                <h4>Productos</h4>
-                <ul>
-                    <li><a href="{{ route('view-productos') }}">Todos los productos</a></li>
-                    <li><a href="{{ route('view-productos') }}">Populares</a></li>
-                    <li><a href="{{ route('view-productos') }}">Los mas vendidos</a></li>
-                    <li><a href="{{ route('view-productos') }}">Nuevos</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Síganos</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <div class="col-md-4 mb-5">
+                <div class="row">
+                    <div class="col-md-12 text-center fs-2">Preguntas Frecuentes</div>
+                    <div class="col-md-6 mt-3">¿Quienes son y cuando se fundo?</div>
+                    <div class="col-md-6 mt-3">¿Donde se encuentran ubicados?</div>
+                    <div class="col-md-6 mt-3">¿Cuantos años de experiencia tienen?</div>
+                    <div class="col-md-6 mt-3">¿Empresa numero 1 en mexico?</div>
                 </div>
             </div>
         </div>

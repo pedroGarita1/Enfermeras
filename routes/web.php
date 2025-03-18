@@ -24,6 +24,10 @@ Route::controller(Vistas::class)->group(function(){
     Route::get('/edit-producto/{id}','edit_producto')->name('view-edit-producto');
     // ========== VIEW NOSOTROS ==========
     Route::get('/sobre-nosotros','sobre_nosotros')->name('view-nosotros');
+    // ========== VIEW CONTACTO ==========
+    Route::get('/contacto-empresa','contacto')->name('view-contacto');
+    // ========== VIEW PREGUNTAS FRECUENTES ==========
+    Route::get('/preguntas-frecuentes','pregunta_frecuente')->name('view-preguntas');
     // ========== VIEW ARTICULOS ==========
     Route::get('/creador-articulos','store_articulo')->name('view-store-articulo');
     Route::get('/articulo/{id}/{titulo}','view_articulo')->name('view-articulo');

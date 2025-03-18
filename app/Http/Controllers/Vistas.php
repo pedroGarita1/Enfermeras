@@ -30,7 +30,7 @@ class Vistas extends Controller
     }
     public function general_servicios(){
         $titulo = 'General servicios';
-        return view('modules/servicios/general_servicios', compact('titulo'));
+        return view('modules/services/services', compact('titulo'));
     }
     public function servicio($name){
         $titulo = 'Servicio ' . $name;
@@ -63,10 +63,18 @@ class Vistas extends Controller
         return view('modules/articulos/vista_articulo',compact('titulo','articulo'));
     }
     public function all_articulos(){
-        $recientes = Articulos::whereDate('created_at','>', now()->subDays(5))->get();
+        // $recientes = Articulos::whereDate('created_at','>', now()->subDays(5))->get();
         $titulo = 'Articulos';
-        $articulos = Articulos::latest('created_at')->get();
-        return view('modules/articulos/all_articulos',compact('titulo','articulos','recientes'));
+        // $articulos = Articulos::latest('created_at')->get();
+        return view('modules/articles/articles',compact('titulo'));
+    }
+    public function contacto (){
+        $titulo = 'Contacto';
+        return view('modules/contacto/contacto', compact('titulo'));
+    }
+    public function pregunta_frecuente(){
+        $titulo = "Preguntas Frecuentes";
+        return view('modules/pregunta_frecuente/pregunta_frecuente',compact('titulo'));
     }
     public function view_edit_articulo($id, $titulo){
         $titulo = 'Editar articulo' . $titulo;

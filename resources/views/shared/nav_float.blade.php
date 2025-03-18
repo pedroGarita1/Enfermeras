@@ -1,41 +1,35 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-    <div class="container">
-        <a class="navbar-brand" href="{{ route('view-inicio') }}"><img src="{{ asset('img/logo-meeimex.png') }}" style="height: 60px; width: 60px;" alt=""></a>
-        <button class="navbar-toggler"type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="mx-auto"></div>
-            <ul class="navbar-nav">
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-transparent sticky-top">
+        <a class="navbar-brand fs-2" href="{{ route('view-inicio') }}">Empresa</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav m-auto fs-4">
                 <li class="nav-item">
-                    <a class="nav-link cta fs-5" href="{{ route('view-servicios') }}"><span class="hover-underline-animation text-white">SERVICIOS</span></a>
+                    <a class="nav-link @if($titulo == 'General servicios') active @endif" href="{{ route('view-servicios') }}"><i class="fa-solid fa-square-poll-horizontal"></i> Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link cta fs-5" href="{{ route('view-productos') }}"><span class="hover-underline-animation text-white">PRODUCTOS</span></a>
+                    <a class="nav-link @if($titulo == 'Sobre nosotros') active @endif" href="{{ route('view-nosotros') }}"><i class="fa-solid fa-circle-info"></i> ¿Quienes somos?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link cta fs-5" href="{{ route('view-nosotros') }}"><span class="hover-underline-animation text-white">SOBRE NOSOTROS</span></a>
+                    <a class="nav-link @if($titulo == 'Articulos') active @endif" href="{{ route('view-articulos') }}"><i class="fa-solid fa-newspaper"></i> Articulos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link cta fs-5" data-bs-toggle="modal" data-bs-target="#modal_contactanos"><span class="hover-underline-animation text-white">CONTACTANOS</span></a>
+                    <a class="nav-link @if($titulo == 'Contacto') active @endif" href="{{ route('view-contacto') }}"><i class="fa-solid fa-address-book"></i> Contacto</a>
                 </li>
-                @guest
-                <li class="nav-item fs-5 fw-bold">
-                    <a class="nav-link cta" href="{{ route('view-login') }}"><span class="hover-underline-animation text-white">ACCEDER <i class="fa-solid fa-right-to-bracket"></i></span></a>
+                <li class="nav-item">
+                    <a class="nav-link @if($titulo == 'Preguntas Frecuentes') active @endif" href="{{ route('view-preguntas') }}"><i class="fa-solid fa-circle-question"></i> Preguntas Frecuentes</a>
                 </li>
-                @endguest
-                @auth
-                <li class="nav-item dropdown fs-5 fw-bold me-3">
-                    <a class="nav-link dropdown-toggle cta" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="hover-underline-animation">{{ Str::limit(Auth::user()->name, 20, '.') }}</span>
-                    </a>
-                    <ul class="dropdown-menu bg-transparent" aria-labelledby="navbarDropdown">
-                        {{-- <li><hr class="dropdown-divider"></li> --}}
-                        <li><a class="dropdown-item text-white" href="{{ route('Auth-lognOut') }}">Cerrar sesion</a></li>
-                    </ul>
+            </ul>
+            <ul class="navbar-nav fs-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-user"></i> Usuario</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#"><i class="fa-solid fa-person"></i> Perfil</a>
+                        <a class="dropdown-item" href="#"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+                        <a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a>
+                    </div>
                 </li>
-                @endauth
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>
